@@ -13,3 +13,11 @@ sentry[postgres]==7.7.0
 # ldap user store
 django-auth-ldap==1.2.6
 
+# hipchat integration
+sentry-hipchat==0.6.0
+
+# redmine integration
+sentry-redmine==0.1.0
+
+# statsd extension
+sentry-statsd==0.0.2
