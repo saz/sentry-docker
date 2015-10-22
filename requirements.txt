@@ -17,7 +17,7 @@ django-auth-ldap==1.2.6
 sentry-hipchat==0.6.0
 
 # redmine integration
-sentry-redmine==0.1.0
+-e git+https://github.com/getsentry/sentry-redmine.git@79046df5b39a5bda7f3ef44ec8f2a311219a58c2#egg=sentry_redmine
 
 # statsd extension
 sentry-statsd==0.0.2
