@@ -20,3 +20,6 @@ sentry-hipchat==0.6.0
 
 # statsd extension
 sentry-statsd==0.0.2
+
+# Google sso auth
+https://github.com/getsentry/sentry-auth-google/archive/master.zip

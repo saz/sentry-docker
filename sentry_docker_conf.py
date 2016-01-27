@@ -160,6 +160,8 @@ FACEBOOK_API_SECRET = config('FACEBOOK_API_SECRET', default='')
 # http://code.google.com/apis/accounts/docs/OAuth2.html#Registering
 GOOGLE_OAUTH2_CLIENT_ID = config('GOOGLE_OAUTH2_CLIENT_ID', default='')
 GOOGLE_OAUTH2_CLIENT_SECRET = config('GOOGLE_OAUTH2_CLIENT_SECRET', default='')
+GOOGLE_CLIENT_ID = config('GOOGLE_OAUTH2_CLIENT_ID', default='')
+GOOGLE_CLIENT_SECRET = config('GOOGLE_OAUTH2_CLIENT_SECRET', default='')
 
 # https://github.com/settings/applications/new
 GITHUB_APP_ID = config('GITHUB_APP_ID', default='')
