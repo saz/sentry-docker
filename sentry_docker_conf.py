@@ -3,7 +3,7 @@
 from sentry.conf.server import *  # noqa
 import os.path
 
-from decouple import config
+from decouple import config, Csv
 import dj_database_url
 import django_cache_url
 import functools
@@ -28,6 +28,8 @@ CACHES = {'default': django_cache_url.config() }
 SENTRY_CACHE = 'sentry.cache.django.DjangoCache'
 
 SENTRY_PUBLIC = config('SENTRY_PUBLIC', default=False, cast=bool)
+
+SENTRY_DISALLOWED_IPS = config('SENTRY_DISALLOWED_IPS', default='', cast=Csv())
 
 def nydus_config(from_env_var):
     """
