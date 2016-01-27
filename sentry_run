@@ -20,16 +20,8 @@ fi
 
 sentry --config=$SENTRY_CONF_FILE upgrade --noinput
 
-/usr/bin/expect << EOF
+sentry --config=$SENTRY_CONF_FILE createuser --email=${SENTRY_ADMIN_EMAIL:-"root@localhost"} --password=${SENTRY_ADMIN_PASSWORD:-admin} --superuser --no-input
 
-spawn sentry --config=$SENTRY_CONF_FILE createsuperuser --username=${SENTRY_ADMIN_USERNAME:-admin} --email=${SENTRY_ADMIN_EMAIL:-"root@localhost"}
-
-expect "Password: "
-send "${SENTRY_ADMIN_PASSWORD:-admin}\r"
-expect "Password (again): "
-send "${SENTRY_ADMIN_PASSWORD:-admin}\r"
-expect "Superuser created successfully."
-EOF
 
     if [ -n "$SENTRY_INITIAL_TEAM" ]; then
         python $SCRIPTS_DIR/create_team_or_project.py team ${SENTRY_ADMIN_USERNAME:-admin} $SENTRY_INITIAL_TEAM
