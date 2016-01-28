@@ -30,6 +30,7 @@ SENTRY_CACHE = 'sentry.cache.django.DjangoCache'
 SENTRY_PUBLIC = config('SENTRY_PUBLIC', default=False, cast=bool)
 
 SENTRY_DISALLOWED_IPS = config('SENTRY_DISALLOWED_IPS', default='', cast=Csv())
+SENTRY_SINGLE_ORGANIZATION = config('SENTRY_SINGLE_ORGANIZATION', default=False, cast=bool)
 
 def nydus_config(from_env_var):
     """
