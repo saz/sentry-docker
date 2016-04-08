@@ -7,7 +7,7 @@ dj-database-url==0.3.0
 django-redis==4.2.0
 
 # sentry
-sentry==8.0.4
+sentry==8.3.1
 
 # ldap user store
 django-auth-ldap==1.2.6
@@ -16,10 +16,13 @@ django-auth-ldap==1.2.6
 sentry-hipchat==0.6.0
 
 # redmine integration
--e git+https://github.com/getsentry/sentry-redmine.git@79046df5b39a5bda7f3ef44ec8f2a311219a58c2#egg=sentry_redmine
+-e git+https://github.com/getsentry/sentry-redmine.git@3f411245e345dcc8a8be7613d430a41cbd8524cc#egg=sentry_redmine
 
 # statsd extension
 sentry-statsd==0.0.2
 
 # Google sso auth
 https://github.com/getsentry/sentry-auth-google/archive/master.zip
+
+# slack integration
+https://github.com/getsentry/sentry-slack/archive/master.zip
